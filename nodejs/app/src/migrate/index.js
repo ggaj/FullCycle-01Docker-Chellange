@@ -1,4 +1,6 @@
+const moniker = require('moniker');
 const mysql = require("mysql");
+
 const config = {
   host: "db",
   user: "root",
@@ -11,8 +13,8 @@ connection.query(
   `create table if not exists people(id int not null auto_increment, name varchar(255), primary key(id))`
 );
 
-connection.query(`DELETE FROM people;`);
-connection.query(`INSERT INTO people(name) values('Gildo Jr')`);
-connection.query(`INSERT INTO people(name) values('Wesley Full Cycle')`);
+const mockName = moniker.choose();
+
+connection.query(`INSERT INTO people(name) values('${mockName}')`);
 
 connection.end();
