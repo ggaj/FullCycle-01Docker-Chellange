@@ -1,0 +1,16 @@
+{
+  "name": "fullcycle-chellange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/migrate/index.js && node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql": "^2.18.1"
+  }
+}
