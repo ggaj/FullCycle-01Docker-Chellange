@@ -10,6 +10,7 @@ services:
       - node-network
     volumes:
       - ../app:/app
+      - /app/node_modules
     command: "dockerize -wait tcp://db:3306 -timeout 20s npm start"
     depends_on:
       - db
